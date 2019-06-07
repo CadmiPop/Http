@@ -54,7 +54,7 @@ namespace Http
             string responseHeader = $"HTTP/1.1 200 OK\r\nContent-Length: {responseBody.Length}\r\n\r\n";
             stream.Write(Encoding.UTF8.GetBytes(responseHeader));
             stream.Write(Encoding.UTF8.GetBytes(responseBody));
-            stream.Close();
+            
         }
 
         private void Execute(DirectoryInfo folder)

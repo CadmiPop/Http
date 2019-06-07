@@ -23,5 +23,23 @@ namespace HttpTests
             var b = example.Match(url).RemainingText();
             Assert.True(example.Match(url).Success());
         }
+
+        [Fact]
+        public void Test3()
+        {
+            var url = "GET /home.html HTTP/1.1\r\n";
+            var example = new RequestLine();
+            var b = example.Match(url).RemainingText();
+            Assert.True(example.Match(url).Success());
+        }
+
+        [Fact]
+        public void Test4()
+        {
+            var url = "POST /myform.html HTTP/1.1\r\n";
+            var example = new RequestLine();
+            var b = example.Match(url).RemainingText();
+            Assert.True(example.Match(url).Success());
+        }
     }
 }

@@ -39,7 +39,7 @@ namespace Http
             var slash = new Character('/');
             var period = new Character('.');
             var space = new Character(' ');
-            var lineEnd = new Sequance(new Character((char)13), new Character((char)10));
+            var lineEnd = new Text("\r\n");
             var httpVersion = new Sequance(new Text("HTTP"),slash,digits,period,digits);
 
             this.pattern = new Sequance(method, space, new RequestURI(), space, httpVersion, lineEnd);
