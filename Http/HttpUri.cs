@@ -60,9 +60,9 @@ namespace Http
         public IMatch Match(string text)
         {
             IMatch match = pattern.Match(text);
-            if (match.Success())
-                return new UriMatch(match.RemainingText(),ExtractUri(text, match.RemainingText()));
-            return match;
+            return match.Success()
+                ? new UriMatch(match.RemainingText(),ExtractUri(text, match.RemainingText()))
+                : match;
         }
 
         private Uri ExtractUri(string text, string remainingText)

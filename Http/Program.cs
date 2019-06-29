@@ -6,7 +6,7 @@ namespace Http
     {
         static void Main(string[] args)
         {
-            var server = new ServerHTTP(@"C:\Users\Andreea\source\repos\JSONClasses\json.txt");
+            var server = new ServerHTTP(@"C:\Users\Andreea\source\repos\JSONClasses");
             Console.WriteLine("Hello World!");
         }
     }
